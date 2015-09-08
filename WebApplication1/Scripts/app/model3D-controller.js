@@ -1,26 +1,30 @@
 ﻿angular.module('Model3DApp', [])
     .controller('Model3DCtrl', function ($scope, $http) {
-        $scope.answered = false;
+        $scope.id = 0;
         $scope.title = "loading model...";
-        $scope.options = [];
-        $scope.correctAnswer = false;
-        $scope.working = false;
+        $scope.WorkFlowState = 0;
+        $scope.Name = "";
+        $scope.TypeFile = "";
 
         $scope.answer = function () {
             return $scope.correctAnswer ? 'correct' : 'incorrect';
         };
 
         $scope.nextQuestion = function () {
-            $scope.working = true;
-            $scope.answered = false;
-            $scope.title = "loading question...";
-            $scope.options = [];
+            $scope.id = 0;
+            $scope.title = "loading model...";
+            $scope.WorkFlowState = [];
+            $scope.Name = "";
+            $scope.TypeFile = "";
 
             $http.get("api/Model_3D").success(function (data, status, headers, config) {
-                $scope.options = data.options;
+                
+               
+                $scope.id = data.id;
                 $scope.title = data.title;
-                $scope.answered = false;
-                $scope.working = false;
+                $scope.WorkFlowState = data.WorkFlowState;
+                $scope.Name = data.Name;
+                $scope.TypeFile = data.TypeFile;
             }).error(function (data, status, headers, config) {
                 $scope.title = "Oops... something went wrong";
                 $scope.working = false;
@@ -28,10 +32,9 @@
         };
 
         $scope.sendAnswer = function (option) {
-            $scope.working = true;
-            $scope.answered = true;
+           
 
-            $http.post('api/Model_3D', { 'questionId': option.questionId, 'optionId': option.id }).success(function (data, status, headers, config) {
+            $http.post('api/Model_3D', { 'id': option.id, 'title': option.title }).success(function (data, status, headers, config) {
                 $scope.correctAnswer = (data === "true");
                 $scope.working = false;
             }).error(function (data, status, headers, config) {

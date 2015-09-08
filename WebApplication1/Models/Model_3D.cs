@@ -8,7 +8,7 @@ namespace WebApplication1.Models
     public class Model_Base
     {
         public int id { get; set; }
-        public int WorkFlowState { get; set; }
+        public int [] WorkFlowState { get; set; }
         public string Name { get; set; }
         public string TypeFile { get; set; }
        
