@@ -24,15 +24,17 @@ namespace WebApplication1.Models
     }
     public class Model_3D : Model_Base
     {
-       
+        public DateTime CreateDate { get; set; }
         public byte[] OriginalModel3D { get; set; }
+        public DateTime UpdateDate { get; set; }
 
     }
     public class Model_2D : Model_Base
     {
-
+        public DateTime CreateDate { get; set; }
         public byte[] OriginalModel2D { get; set; }
-      
+
+        public DateTime UpdateDate { get; set; }
 
     }
 }
