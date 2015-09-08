@@ -14,27 +14,41 @@ namespace WebApplication1.Models
 
 
     }
-    public class Model_Base
+    public class ModelBase<T>
     {
+        public DateTime CreateDate { get; set; }
         public int id { get; set; }
         public WorkFlowState WorkFlowState { get; set; }
         public string Name { get; set; }
         public string TypeFile { get; set; }
-       
-    }
-    public class Model_3D : Model_Base
-    {
-        public DateTime CreateDate { get; set; }
-        public byte[] OriginalModel3D { get; set; }
         public DateTime UpdateDate { get; set; }
+        public List<DefectType<T>> Defects { get; set; }
+        public ModelBase()
+        {
+            Defects = new List<DefectType<T>>();
+        }
+    }
+     public class Model_3D : ModelBase<string>
+    {
+       
+        public byte[] OriginalModel3D { get; set; }
+        public Model_3D()
+        {
+
+        }
 
     }
-    public class Model_2D : Model_Base
+    public class DefectType <T>
     {
-        public DateTime CreateDate { get; set; }
+        public int id { get; set; }
+        public List<T> DefectsByType { get; set; }
+    }
+    public class Model_2D : ModelBase<string>
+    {
+      
         public byte[] OriginalModel2D { get; set; }
 
-        public DateTime UpdateDate { get; set; }
+      
 
     }
 }
