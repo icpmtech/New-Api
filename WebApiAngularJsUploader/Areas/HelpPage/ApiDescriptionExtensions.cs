@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace WebApiUploaderModels.Areas.HelpPage
+namespace WebApiAngularJsUploader.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
     {

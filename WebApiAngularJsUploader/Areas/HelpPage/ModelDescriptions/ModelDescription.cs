@@ -1,6 +1,6 @@
 using System;
 
-namespace WebApiUploaderModels.Areas.HelpPage.ModelDescriptions
+namespace WebApiAngularJsUploader.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Describes a type model.

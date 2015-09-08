@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using WebApiUploaderModels.Areas.HelpPage.ModelDescriptions;
-using WebApiUploaderModels.Areas.HelpPage.Models;
+using WebApiAngularJsUploader.Areas.HelpPage.ModelDescriptions;
+using WebApiAngularJsUploader.Areas.HelpPage.Models;
 
-namespace WebApiUploaderModels.Areas.HelpPage
+namespace WebApiAngularJsUploader.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

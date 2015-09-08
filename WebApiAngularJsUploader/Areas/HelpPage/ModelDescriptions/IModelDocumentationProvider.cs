@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace WebApiUploaderModels.Areas.HelpPage.ModelDescriptions
+namespace WebApiAngularJsUploader.Areas.HelpPage.ModelDescriptions
 {
     public interface IModelDocumentationProvider
     {

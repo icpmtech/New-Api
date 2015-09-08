@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace WebApiUploaderModels.Areas.HelpPage
+namespace WebApiAngularJsUploader.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

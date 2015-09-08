@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace WebApiUploaderModels.Areas.HelpPage.ModelDescriptions
+namespace WebApiAngularJsUploader.Areas.HelpPage.ModelDescriptions
 {
     public class ComplexTypeModelDescription : ModelDescription
     {

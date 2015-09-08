@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace WebApiUploaderModels.Areas.HelpPage.ModelDescriptions
+namespace WebApiAngularJsUploader.Areas.HelpPage.ModelDescriptions
 {
     public class EnumTypeModelDescription : ModelDescription
     {

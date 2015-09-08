@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using WebApiUploaderModels.Areas.HelpPage.ModelDescriptions;
-using WebApiUploaderModels.Areas.HelpPage.Models;
+using WebApiAngularJsUploader.Areas.HelpPage.ModelDescriptions;
+using WebApiAngularJsUploader.Areas.HelpPage.Models;
 
-namespace WebApiUploaderModels.Areas.HelpPage.Controllers
+namespace WebApiAngularJsUploader.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.
