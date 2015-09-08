@@ -20,6 +20,7 @@ namespace WebApplication1.Controllers
         public IQueryable<Model_3D> GetModel_3D()
         {
             return db.Model_3D;
+
         }
 
         // GET: api/Model_3D/5
