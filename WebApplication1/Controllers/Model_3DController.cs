@@ -17,9 +17,16 @@ namespace WebApplication1.Controllers
         private WebApplication2Context db = new WebApplication2Context();
 
         // GET: api/Model_3D
-        public IQueryable<Model_3D> GetModel_3D()
+        public List<Model_3D> GetModel_3D()
         {
-            return db.Model_3D;
+            Model_3D _Model_3D = new Model_3D();
+            _Model_3D.id = 1;
+            _Model_3D.Name = "Teste";
+            _Model_3D.OriginalModel3D =null;
+            List<Model_3D> listaModel = new List<Model_3D>();
+            listaModel.Add(_Model_3D);
+
+            return listaModel;
 
         }
 
